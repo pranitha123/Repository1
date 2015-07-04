@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+   <h:head>
+   </h:head>
+
+    <h:body>
+ 
+    	<h:form>
+    		<p:dataTable value="#{product.orderList}" var="o">
+ 
+    		<p:column>
+ 
+    			<f:facet name="header">Order No</f:facet>
+    			#{o.orderNo}
+ 
+    		</p:column>
+ 
+    		<p:column>
+ 
+    			<f:facet name="header">Product Name</f:facet>
+    			#{o.productName}
+    		</p:column>
+ 
+    		<p:column>
+                <f:facet name="header">Price</f:facet>
+    			#{o.price}  
+    		</p:column>
+             <p:column>
+            <f:facet name="header">Quantity</f:facet>
+    			#{o.qty}
+    		</p:column>
+    		<p:column>
+ <f:facet name="header">date</f:facet>
+ <p:calendar value="#{product.date}" mode="popup" navigator="true" />
+ </p:column>
+  <p:column>
+ <f:facet name="header">Action</f:facet>
+ <p:commandButton value="Delete" actionListener="#{product.deleteAction(o)}" >
+
+    			</p:commandButton>
+    			
+ </p:column>
+ 
+    		
+ </p:dataTable>
+ <h3>Enter Order</h3>
+    		<table>
+    		<tr>
+    			<td>Order No :</td>
+    			<td><p:inputText size="10" value="#{product.orderNo}" /></td>
+    		</tr>
+    		<tr>
+    			<td>Product Name :</td>
+    			<td><p:inputText size="20" value="#{product.productName}" /></td>
+    		</tr>
+    		<tr>
+    			<td>Quantity :</td>
+    			<td><p:inputText size="5" value="#{product.qty}" /></td>
+    		</tr>
+    		<tr>
+    			<td>Price :</td>
+    			<td><p:inputText size="10" value="#{product.price}" /></td>
+    		</tr>
+    		</table>
+ <h:commandButton value="Add" action="#{product.addAction}"  />  
+ <h:commandButton type="reset" value="Reset" />
+    	</h:form>
+    </h:body>
+</html>

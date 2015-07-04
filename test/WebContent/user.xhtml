@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+       xmlns:p="http://primefaces.org/ui">
+<h:body>
+<h:form>
+<h:selectOneMenu value="#{userbean.favoriteCar1}">
+<f:selectItem itemValue="selectone" ></f:selectItem>
+                <f:selectItem itemValue="520" itemLabel="BMW Series 5 - 520" />
+
+                <f:selectItem itemValue="525" itemLabel="BMW Series 5 - 525" />
+
+                <f:selectItem itemValue="535" itemLabel="BMW Series 5 - 535" />
+            </h:selectOneMenu>
+ <h:commandButton value="Submit" action="result2" />
+	        <h:commandButton value="Reset" type="reset" />
+	        </h:form>
+</h:body>
+</html>

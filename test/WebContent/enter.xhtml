@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+    <h:head>
+    </h:head>
+    
+<h:body>
+<h:form>
+<p:panelGrid columns="2">
+<f:facet name="header">
+Basic PanelGrid
+</f:facet>
+<h:outputLabel for="username" value="username:"></h:outputLabel>
+<p:inputText id="username" 
+value="#{login.username}" label="username">
+</p:inputText>
+<h:outputLabel for="password" value="password:"></h:outputLabel>
+<p:inputMask id="password" 
+value="#{login.password}" label="password">
+</p:inputMask>
+<f:facet name="footer">
+<p:commandButton type="button" value="Save"  action="sucess" />
+</f:facet>
+</p:panelGrid>
+</h:form>
+</h:body>
+</html>
