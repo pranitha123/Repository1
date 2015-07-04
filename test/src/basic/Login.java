@@ -16,6 +16,7 @@ public class Login implements Serializable {
 	
 	public void setUsername(String username) {
 		this.username = username;
+		System.out.println("HI");
 	}
 	public String getPassword() {
 		return password;
